@@ -4,34 +4,56 @@
 }
 
 body {
-  margin: 3em 5%;
+  margin: 8% auto;
+  width: 45em;
 }
 
 header {
   background-color: #1c79b3;
   color: white;
-  text-align: center;
-}
-
-header h1,
-header h2 {
-  display:inline-block;
-  padding: 2% 2.3%;
+  display:flex;
 }
 
 header h1 {
   color: black;
   font-size: 1.8em;
+  padding: 2% .9em 2% .87em;
 }
 
 header h2 {
   font-size: 1.3em;
+  line-height: 3.2em;
+}
+
+.pj {
+  padding: 0 .9em 0 .87em;
+}
+
+.pg {
+  margin-left:.85em;
+}
+
+.pe {
+  margin-left: 2.7em;
+}
+
+.gf-gc{
+  margin-left: 2.5em;
+} 
+
+.gd {
+  margin-left: 1.6em;
+}
+
+.pts {
+  margin-left: .9em;
 }
 
 div.country {
-  padding: 1.2em 1em; 
+  padding: 1.2em .6em; 
   background-color: skyblue;
   border-bottom: solid .2em rgba(0, 0, 255, 0.818);
+  letter-spacing: .05em;
 }
 
 /* FORM */
@@ -42,18 +64,75 @@ form {
 
 input[type='text'] {
   margin-left: 1.3em;
-  height: 1.5em;
+  height: 2.2em;
+  width: 40%;
+  font-size: 1em;
+  background-color: whitesmoke;
+}
+
+input[type='submit'] {
+  font-size: 1.5em;
+  color: white;
+  background-color:purple;
+  border-radius: .4em;
+  padding: .15em .5em .2em .5em;
+  float:right;
+  margin-right: 1em;
 }
 
 /* COUNTRY ELEMENTS */
 
-.country div, button {
-  display: inline;
-  
+.country, 
+.pg-pe-pp, 
+.static-score, 
+.puntos {
+  display: flex;
+}
+
+.country-name {
+  flex-grow: 2;
+  /*width: 15%;*/
+}
+
+.country-name button {
+  border:none;
+  font-size: 1.1em;
+  color: red;
+  background-color: skyblue;
+  padding: 0;
+}
+
+.country-name button:hover,
+.pg-pe-pp button:hover  {
+  transform: scale(1.3);
+}
+
+input[type='submit']:hover {
+  transform: scale(1.1);
 }
 
 .country div {
-  margin-left: 1em;
-  margin-right: 1em;
+  margin-left: .8em;
+  margin-right: .8em;
 }
 
+.country-name span {
+  margin-left: 7%;
+}
+
+.pg-pe-pp span,
+.static-score span,
+.puntos span {
+  width: 1.4em;
+  text-align: center;
+}
+
+.pg-pe-pp button {
+  border: none;
+  color: purple;
+  line-height: .5em;
+  font-size: 1.2em;
+  background-color: skyblue;
+  padding: 0;
+  font-weight: bold;
+}

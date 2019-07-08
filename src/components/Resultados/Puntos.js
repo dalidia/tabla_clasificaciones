@@ -2,7 +2,7 @@ import React from 'react';
 
 const Puntos = props => {
 	return (
-    <div className='Puntos'>
+    <div className='puntos'>
       <span>{props.puntos}</span>
     </div>
   );

@@ -79,9 +79,9 @@ class Country extends Component {
   render () {
     return (
       <div className="country">
-        <span>
+        <span className="country-name">
           <button onClick={() => this.props.handleRemoveCountry(this.props.index)}>✖</button>
-          { this.props.name }
+          <span>{this.props.name}</span>
         </span>
   
         <StaticScore 
