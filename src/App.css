@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+}
+
+body {
+  margin: 3em 5%;
+}
+
+header {
+  background-color: #1c79b3;
+  color: white;
+  text-align: center;
+}
+
+header h1,
+header h2 {
+  display:inline-block;
+  padding: 2% 2.3%;
+}
+
+header h1 {
+  color: black;
+  font-size: 1.8em;
+}
+
+header h2 {
+  font-size: 1.3em;
+}
+
+div.country {
+  padding: 1.2em 1em; 
+  background-color: skyblue;
+  border-bottom: solid .2em rgba(0, 0, 255, 0.818);
+}
+
+/* FORM */
+form {
+  background-color: wheat;
+  padding: 1.3em 0;
+}
+
+input[type='text'] {
+  margin-left: 1.3em;
+  height: 1.5em;
+}
+
+/* COUNTRY ELEMENTS */
+
+.country div, button {
+  display: inline;
+  
+}
+
+.country div {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
