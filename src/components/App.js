@@ -40,7 +40,8 @@ class App extends Component {
     };
 
     this.state.countries.map(country => {
-      country.pj = newCountry.pj
+      country.pj = newCountry.pj;
+      return country;
     });
 
     this.setState(prevState => ({

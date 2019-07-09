@@ -12,6 +12,7 @@ class AddCountryForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.handleAddCountry(this.state.value);
+    this.setState({value: '',});
   }
 
   render() {
