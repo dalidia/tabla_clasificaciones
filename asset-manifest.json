@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tabla_posiciones/static/css/main.349b7b71.chunk.css",
+    "main.js": "/tabla_posiciones/static/js/main.ca00b1cd.chunk.js",
+    "main.js.map": "/tabla_posiciones/static/js/main.ca00b1cd.chunk.js.map",
+    "runtime~main.js": "/tabla_posiciones/static/js/runtime~main.d818a45a.js",
+    "runtime~main.js.map": "/tabla_posiciones/static/js/runtime~main.d818a45a.js.map",
+    "static/js/2.d6a534e5.chunk.js": "/tabla_posiciones/static/js/2.d6a534e5.chunk.js",
+    "static/js/2.d6a534e5.chunk.js.map": "/tabla_posiciones/static/js/2.d6a534e5.chunk.js.map",
+    "index.html": "/tabla_posiciones/index.html",
+    "precache-manifest.6000fb6954448d485902fd7b4809e5b3.js": "/tabla_posiciones/precache-manifest.6000fb6954448d485902fd7b4809e5b3.js",
+    "service-worker.js": "/tabla_posiciones/service-worker.js",
+    "static/css/main.349b7b71.chunk.css.map": "/tabla_posiciones/static/css/main.349b7b71.chunk.css.map"
+  }
+}
