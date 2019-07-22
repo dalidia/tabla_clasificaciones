@@ -1,14 +1,12 @@
 import React from 'react';
 
-const Puntos = props => {
+const Puntos = ({puntos}) => {
 	return (
     <div className='puntos'>
-      <span>{props.puntos}</span>
+      <span>{puntos}</span>
     </div>
   );
-
 };
-
 
 export default Puntos;
 

@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Score = props => {
+const Score = ({score, index, changeScore}) => {
 	return (
     <div className="pg-pe-pp">
-      <button onClick={() => props.changeScore(+1)}>↑</button>
-      <span>{props.score}</span>
-      <button onClick={() => props.changeScore(-1)}>↓</button>
+      <button onClick={() => changeScore(score, index, +1)}>↑</button>
+      <span>{score}</span>
+      <button onClick={() => changeScore(score, index, -1)}>↓</button>
     </div>
   );
 };

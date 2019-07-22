@@ -1,125 +1,58 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Score from './Resultados/Score';
 import StaticScore from './Resultados/StaticScore';
 import Puntos from './Resultados/Puntos';
 
-class Country extends Component {
-  state = {
-    pg: 0,
-    pe: 0,
-    pp: 0,
-    gf: 0,
-    gc: 0,
-    df: 0,
-    puntos: 0
-  };
+const Country = (props) => {
+  const {name, id, index, pj, pg, pe, pp, gf, gc,df, puntos, handlePeChange, handlePgChange, handlePpChange, handleGf, handleGc, handleRemoveCountry} = props;
+  return (
+    <div className="country">
+      <span className="country-name">
+        <button onClick={() => handleRemoveCountry(id)}>✖</button>
+        <span>{name}</span>
+      </span>
 
-  handlePeChange = delta => {
-    if (this.state.pe <= 0 && delta < 0) {
-      return;
-    } else {
-      this.setState(prevState => {
-        return {
-          pe: prevState.pe += delta,
-          puntos: prevState.puntos += delta
-        }
-      });
-    }
-  };
+      <StaticScore 
+      score={pj} />
 
-  handlePgChange = delta => {
-    if (this.state.pg <= 0 && delta < 0) {
-      return;
-    } else {
-      this.setState(prevState => {
-        return {
-          pg: prevState.pg += delta,
-          puntos: prevState.puntos += (delta * 3)
-        }
-      });
-    }
-  };
+      <Score 
+      score={pg}
+      index={index}
+      changeScore={handlePgChange}
+      />
 
-  handlePpChange = delta => {
-    if (this.state.pp <= 0 && delta < 0) {
-      return;
-    } else {
-      this.setState(prevState => ({
-        pp: prevState.pp += delta
-      }));
-    }
-  };
+      <Score
+      score={pe}
+      index={index}
+      changeScore={handlePeChange} 
+      />
 
-  handleGf = delta => {
-    if (this.state.gf <= 0 && delta < 0) {
-      return;
-    } else {
-      this.setState(prevState => {
-        return {
-          gf: prevState.gf += delta,
-          df: prevState.df += delta
-        }
-      })
-    }
-  };
+      <Score
+      score={pp}
+      index={index}
+      changeScore={handlePpChange}
+      />
 
-  handleGc = delta => {
-    if (this.state.gc <= 0 && delta < 0) {
-      return;
-    } else {
-      this.setState(prevState => {
-        return {
-          gc: prevState.gc += delta,
-          df: prevState.df -= delta
-        }
-      })
-    }
-  };
+      <Score
+      score={gf}
+      index={index}
+      changeScore={handleGf}
+      />
 
-  render () {
-    return (
-      <div className="country">
-        <span className="country-name">
-          <button onClick={() => this.props.handleRemoveCountry(this.props.index)}>✖</button>
-          <span>{this.props.name}</span>
-        </span>
-  
-        <StaticScore 
-        score={this.props.pj} />
-  
-        <Score 
-        score={this.state.pg}
-        changeScore={this.handlePgChange}
-        />
-  
-        <Score
-        score={this.state.pe}
-        changeScore={this.handlePeChange} 
-        />
-  
-        <Score
-        score={this.state.pp}
-        changeScore={this.handlePpChange}
-        />
+      <Score
+      score={gc}
+      index={index}
 
-        <Score
-        score={this.state.gf}
-        changeScore={this.handleGf}
-        />
+      changeScore={handleGc}
+      />
 
-        <Score
-        score={this.state.gc}
-        changeScore={this.handleGc}
-        />
-  
-        <StaticScore 
-        score={this.state.df} />
+      <StaticScore 
+      score={df} />
 
-        <Puntos
-        puntos={this.state.puntos} />
-      </div>
-    );
-  }
+      <Puntos
+      puntos={puntos} />
+    </div>
+  );
 }
 
 export default Country;

@@ -6,7 +6,7 @@ class AddGroup extends Component{
   };
 
   handleChange = e => {
-    this.setState({value: e.target.value});
+    this.setState({value: e.target.value.toUpperCase()});
   };
 
   handleSubmit = (e) => {
@@ -20,15 +20,15 @@ class AddGroup extends Component{
       <form onSubmit={this.handleSubmit} className="form-add-group">
         <h1>Grupo:</h1>
         <input
-        type='text'
-        value={this.state.value}
-        placeholder='Ingresa el nombre del grupo'
-        onChange={this.handleChange}
+          type='text'
+          value={this.state.value}
+          placeholder='Ingresa el nombre del grupo'
+          onChange={this.handleChange}
         />
 
         <input 
-        type='submit'
-        value='Añade otro grupo'
+          type='submit'
+          value='Añade otro grupo'
         />
       </form>
     );

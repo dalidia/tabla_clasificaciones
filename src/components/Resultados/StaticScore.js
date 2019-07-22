@@ -1,9 +1,9 @@
 import React from 'react';
 
-const StaticScore = props => {
+const StaticScore = ({score}) => {
 	return (
     <div className='static-score'>
-      <span>{props.score}</span>
+      <span>{score}</span>
     </div>
 	);
 };

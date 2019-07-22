@@ -11,15 +11,12 @@ class App extends Component {
       {
         title: 'Grupo A',
         id: 0
-      },
-      {
-        title: 'Grupo B',
-        id: 1
       }
     ]
   };
 
   prevId=this.state.grupos.length;
+  title='Tabla de clasificaciones';
 
   handleAddGroup = (titl) => {
     let newGroup = {
@@ -41,7 +38,7 @@ class App extends Component {
   render() {
     return (
       <div className="tablas">
-        <h1 className='title'>Tabla de clasificaciones</h1>
+        <h1 className='title'>{this.title}</h1>
         {this.state.grupos.map(grupo => 
           <Grupo
           title={grupo.title}
