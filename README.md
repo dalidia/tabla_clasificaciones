@@ -1,4 +1,4 @@
-Soccer Standing Table
+Soccer Standing Table - HTML, CSS, ReactJS
 
 By Lidia Ataupillco Ramos  
 
@@ -12,6 +12,7 @@ Responsive design for smaller devices on progress.
 
 
 ---------------------------------------------------      ESPAÑOL       ------------------------------------------------------
+
 Tabla de posiciones
 
 Por Lidia Ataupillco Ramos
