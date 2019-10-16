@@ -2,13 +2,15 @@ import React from 'react';
 import Score from './Resultados/Score';
 import StaticScore from './Resultados/StaticScore';
 import Puntos from './Resultados/Puntos';
+import Icon from './Icon';
 
 const Country = (props) => {
-  const {name, id, index, pj, pg, pe, pp, gf, gc,df, puntos, handlePeChange, handlePgChange, handlePpChange, handleGf, handleGc, handleRemoveCountry} = props;
+  const {name, isWinner, id, pj, pg, pe,/* pp,*/ gf, gc,df, puntos, handlePeChange, handlePgChange, /*handlePpChange, */handleGf, handleGc, handleRemoveCountry} = props;
   return (
     <div className="country">
       <span className="country-name">
         <button onClick={() => handleRemoveCountry(id)}>✖</button>
+        <Icon isWinner={isWinner}/>
         <span>{name}</span>
       </span>
 
@@ -17,32 +19,33 @@ const Country = (props) => {
 
       <Score 
       score={pg}
-      index={index}
+      id={id}
       changeScore={handlePgChange}
       />
 
       <Score
       score={pe}
-      index={index}
+      id={id}
       changeScore={handlePeChange} 
       />
 
+      {/*
       <Score
       score={pp}
-      index={index}
+      id={id}
       changeScore={handlePpChange}
       />
+      */}
 
       <Score
       score={gf}
-      index={index}
+      id={id}
       changeScore={handleGf}
       />
 
       <Score
       score={gc}
-      index={index}
-
+      id={id}
       changeScore={handleGc}
       />
 
