@@ -6,7 +6,7 @@ const Header = props => {
       <h1>{props.title}</h1>
       <h2 className='pj'>Pj</h2>
       <h2 className='pg'>PG</h2>
-      <h2 className='pe'>PE</h2>
+      {/*<h2 className='pe'>PE</h2>*/}
       <h2 className='pe'>PP</h2>
       <h2 className='gf-gc'>GF</h2>
       <h2 className='gf-gc'>GC</h2>
